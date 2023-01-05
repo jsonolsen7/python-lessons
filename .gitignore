@@ -1,8 +1,10 @@
 python-virtual-environments/__pycache__/
-python-virtual-environments/__pycache__/app.cpython-310.pyc
-python-virtual-environments/env/bin/
-python-virtual-environments/env/lib/
-python-virtual-environments/env/lib/python3.10/site-packages
-python-virtual-environments/env/include/
-python-virtual-environments/env/pyvenv.cfg
-python-virtual-environments/env/story_project.log
+./__pycache__/app.cpython-310.pyc
+./env/bin/
+./DS_Store
+./env/.DS_Store
+./env/lib/
+./env/lib/python3.10/site-packages
+./env/include/
+./env/pyvenv.cfg
+./env/story_project.log
