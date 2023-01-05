@@ -1,0 +1,6 @@
+python-virtual-environments/__pycache__/
+python-virtual-environments/env/bin/
+python-virtual-environments/env/lib
+python-virtual-environments/env/include
+python-virtual-environments/env/pyvenv.cfg
+python-virtual-environments/env/story_project.log
