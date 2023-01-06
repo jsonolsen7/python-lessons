@@ -2,7 +2,7 @@
 
 ## Description
 
-This repo holds all the introductory lessons of Python covered in Week 2. We learned about lists, tuples, dictionaries, classes, namedtuples, entry points, and functions. We practiced with coding challenges and demonstrated our knowledge with the command line story project.
+This repo holds all the introductory lessons of Python covered in Week 2. We learned about lists, tuples, dictionaries, classes, namedtuples, entry points, and functions. We practiced with coding challenges and demonstrated our knowledge with the command line story project. Also, during Week 3, we covered how to read and write csv's using os and pandas.
 
 It also contains an introduction to Flask from Week 3, where I learned how to setup the necessary folders, files, and routes, then created a basic business page.
 
