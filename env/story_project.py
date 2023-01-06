@@ -3,18 +3,22 @@ import datetime
 import logging
 logging.basicConfig(filename="story_project.log", level=logging.DEBUG)
 
-# Classses (not functional yet)
+# Classses (not functional, just for practice with classes)
 # class Person():
 
 #     weight_limit = 300
+#     time_limit = 0
 
 #     def __init__(self, name):
 #         self.name = name
 #         self.selected_items = []
 
-#     def select(self, item):
-#         self.selected_items.append(item)
-#         weight_limit -= item.weight * item.quantity
+#     def select(self, item, quantity):
+#         if hasattr(item, 'hours_lasted'):
+#             self.time_limit += item.hours_lasted * quantity
+#         self.selected_items.extend([(item.name, quantity)])
+#         self.weight_limit -= item.weight * quantity
+
 
 # class Item():
 #     def __init__(self, name, weight, quantity):
@@ -49,10 +53,13 @@ logging.basicConfig(filename="story_project.log", level=logging.DEBUG)
 # print(items_list)
 
 # jason = Person("jason")
-# jason.select("water")
-# jason.select("food capsule pack")
+# jason.select(water, 4)
+# jason.select(food_capsules, 3)
+# jason.select(oxygen_tank, 14)
 # print(jason.selected_items)
+# print(jason.selected_items[1][1])
 # print(jason.weight_limit)
+# print(jason.time_limit)
 
 # Named Tuples (functional)
 items_list = []
