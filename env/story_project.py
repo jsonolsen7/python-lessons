@@ -4,59 +4,36 @@ import logging
 logging.basicConfig(filename="story_project.log", level=logging.DEBUG)
 
 # Classses (not functional yet)
-class Person():
+# class Person():
 
-    weight_limit = 300
+#     weight_limit = 300
 
-    def __init__(self, name):
-        self.name = name
-        self.selected_items = []
+#     def __init__(self, name):
+#         self.name = name
+#         self.selected_items = []
 
-    def select(self, item):
-        self.selected_items.append(item)
-        weight_limit -= item.weight * item.quantity
+#     def select(self, item):
+#         self.selected_items.append(item)
+#         weight_limit -= item.weight * item.quantity
 
-class Item():
-    def __init__(self, name, weight, quantity):
-        self.name = name
-        self.weight = weight
-        self.quantity = quantity
+# class Item():
+#     def __init__(self, name, weight, quantity):
+#         self.name = name
+#         self.weight = weight
+#         self.quantity = quantity
     
-    def __repr__(self):
-        return str(self.name) + "; weight = " + str(self.weight) + "; quantity = " + str(self.quantity) + "\n"
+#     def __repr__(self):
+#         return str(self.name) + "; weight = " + str(self.weight) + "; quantity = " + str(self.quantity) + "\n"
     
-class ExtendedItem(Item):
-    def __init__(self, name, weight, quantity, hours_lasted = 10):
-        super().__init__(name, weight, quantity)
-        self.hours_lasted = hours_lasted
+# class ExtendedItem(Item):
+#     def __init__(self, name, weight, quantity, hours_lasted = 10):
+#         super().__init__(name, weight, quantity)
+#         self.hours_lasted = hours_lasted
 
-    def __repr__(self):
-        return str(self.name) + "; weight = " + str(self.weight) + "; quantity = " + str(self.quantity) + "; hours_lasted = " + str(self.hours_lasted) + "\n"
+#     def __repr__(self):
+#         return str(self.name) + "; weight = " + str(self.weight) + "; quantity = " + str(self.quantity) + "; hours_lasted = " + str(self.hours_lasted) + "\n"
 
-items_list = []
-water = Item("water", 7.5, 6)
-food_capsules = Item("food capsule pack", 5, 5)
-magnetic_compass = Item("magnetic compass", 1, 1)
-box_of_matches = Item("box of matches", .1, 10)
-stellar_map = Item("stellar map", .5, 1)
-rope = Item("50ft nylon rope", 1, 1)
-first_aid_kit = Item("first aid kit", 1, 2)
-parachute = Item("parachute silk", 2, 1)
-life_raft = Item("self-inflating life raft", 15, 1)
-pistol = Item(".45 calibre pistol", .5, 1)
-oxygen_tank = ExtendedItem("100lb oxygen tank", 17, 20)
-items_list.extend([water, food_capsules, magnetic_compass, box_of_matches, stellar_map, rope, first_aid_kit, parachute, life_raft, pistol, oxygen_tank])
-print(items_list)
-
-# jason = Person("jason")
-# jason.select("water")
-# jason.select("food capsule pack")
-# print(jason.selected_items)
-# print(jason.weight_limit)
-
-# Named Tuples (functional)
 # items_list = []
-# Item = namedtuple("Item", "name weight quantity")
 # water = Item("water", 7.5, 6)
 # food_capsules = Item("food capsule pack", 5, 5)
 # magnetic_compass = Item("magnetic compass", 1, 1)
@@ -67,9 +44,32 @@ print(items_list)
 # parachute = Item("parachute silk", 2, 1)
 # life_raft = Item("self-inflating life raft", 15, 1)
 # pistol = Item(".45 calibre pistol", .5, 1)
-# ExtendedItem = namedtuple("ExtendedItem", [*Item._fields, "hours_lasted"])
-# oxygen_tank = ExtendedItem("100lb oxygen tank", 17, 20, 10)
+# oxygen_tank = ExtendedItem("100lb oxygen tank", 17, 20)
 # items_list.extend([water, food_capsules, magnetic_compass, box_of_matches, stellar_map, rope, first_aid_kit, parachute, life_raft, pistol, oxygen_tank])
+# print(items_list)
+
+# jason = Person("jason")
+# jason.select("water")
+# jason.select("food capsule pack")
+# print(jason.selected_items)
+# print(jason.weight_limit)
+
+# Named Tuples (functional)
+items_list = []
+Item = namedtuple("Item", "name weight quantity")
+water = Item("water", 7.5, 6)
+food_capsules = Item("food capsule pack", 5, 5)
+magnetic_compass = Item("magnetic compass", 1, 1)
+box_of_matches = Item("box of matches", .1, 10)
+stellar_map = Item("stellar map", .5, 1)
+rope = Item("50ft nylon rope", 1, 1)
+first_aid_kit = Item("first aid kit", 1, 2)
+parachute = Item("parachute silk", 2, 1)
+life_raft = Item("self-inflating life raft", 15, 1)
+pistol = Item(".45 calibre pistol", .5, 1)
+ExtendedItem = namedtuple("ExtendedItem", [*Item._fields, "hours_lasted"])
+oxygen_tank = ExtendedItem("100lb oxygen tank", 17, 20, 10)
+items_list.extend([water, food_capsules, magnetic_compass, box_of_matches, stellar_map, rope, first_aid_kit, parachute, life_raft, pistol, oxygen_tank])
 
 def conclusion():
     print("You successfully made it the rest of the journey and safely made it to base camp.")
